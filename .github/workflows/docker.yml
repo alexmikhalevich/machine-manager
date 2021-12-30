@@ -65,7 +65,7 @@ jobs:
       - name: Download emulator binary files
         run: |
           mkdir -p /opt
-          docker run --rm -v /opt:/opt/destination:rw -t cartesi/machine-emulator:${{ env.EMULATOR_VERSION }}/bin/cp -vr /opt/cartesi /opt/destination/
+          docker run --rm -v /opt:/opt/destination:rw -t cartesi/machine-emulator:${{ env.EMULATOR_VERSION }} /bin/cp -vr /opt/cartesi /opt/destination/
 
       - name: Set current git organization env var
         id: git_org
